@@ -53,7 +53,6 @@ public class GalleryDataSource extends PageKeyedDataSource<Integer, LoadPhotosRe
     public void loadInitial(@NonNull final LoadInitialParams<Integer> params, @NonNull final LoadInitialCallback<Integer, LoadPhotosResult.PhotoItem> callback) {
         currKey = keys[keySeed++ % keys.length];
         Log.w("myTag", "loadInitial - page " + 1 + " - currentLoadDataStatus " + currentLoadDataStatusLiveData);
-        currentLoadDataStatusLiveData.postValue(LoadDataStatus.INITIAL_LOADING);
         String url = baseUrl + currKey + "&page=1&per_page=" + pageSize;
         StringRequest req = new StringRequest(
                 Request.Method.GET,
@@ -121,7 +120,7 @@ public class GalleryDataSource extends PageKeyedDataSource<Integer, LoadPhotosRe
     }
 
     static enum LoadDataStatus {
-        INITIAL_LOADING, LOADING, COMPLETED, NETWORK_ERROR, NO_MORE_DATA
+        LOADING, COMPLETED, NETWORK_ERROR, NO_MORE_DATA
     }
 
     static enum RetryStatus {
