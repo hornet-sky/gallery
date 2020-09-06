@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp">
+
+    <io.supercharge.shimmerlayout.ShimmerLayout
+        android:id="@+id/shimmerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/photoImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/userTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/photoImageView"
+                tools:text="Tom" />
+
+            <ImageView
+                android:id="@+id/likesImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userTextView"
+                app:srcCompat="@drawable/ic_baseline_thumb_up" />
+
+            <TextView
+                android:id="@+id/likesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/likesImageView"
+                app:layout_constraintStart_toEndOf="@+id/likesImageView"
+                app:layout_constraintTop_toTopOf="@+id/likesImageView"
+                tools:text="100" />
+
+            <ImageView
+                android:id="@+id/favoritesImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/likesTextView"
+                app:layout_constraintStart_toEndOf="@+id/likesTextView"
+                app:layout_constraintTop_toTopOf="@+id/likesTextView"
+                app:srcCompat="@drawable/ic_baseline_favorite" />
+
+            <TextView
+                android:id="@+id/favoritesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/favoritesImageView"
+                app:layout_constraintStart_toEndOf="@+id/favoritesImageView"
+                app:layout_constraintTop_toTopOf="@+id/favoritesImageView"
+                tools:text="100" />
+
+            <ImageView
+                android:id="@+id/downloadsImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/favoritesTextView"
+                app:layout_constraintStart_toEndOf="@+id/favoritesTextView"
+                app:layout_constraintTop_toTopOf="@+id/favoritesTextView"
+                app:srcCompat="@drawable/ic_baseline_arrow_downward" />
+
+            <TextView
+                android:id="@+id/downloadsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/downloadsImageView"
+                app:layout_constraintStart_toEndOf="@+id/downloadsImageView"
+                app:layout_constraintTop_toTopOf="@+id/downloadsImageView"
+                tools:text="100" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </io.supercharge.shimmerlayout.ShimmerLayout>
+</androidx.cardview.widget.CardView>
