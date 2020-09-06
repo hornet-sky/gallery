@@ -16,7 +16,7 @@ import com.google.gson.Gson;
 
 public class GalleryDataSource extends PageKeyedDataSource<Integer, LoadPhotosResult.PhotoItem> {
     private static final String baseUrl = "https://pixabay.com/api/?key=18091106-22deb961167d59b82212b023a&image_type=photo&pretty=true&q=";
-    private static final String[] keys = {"smile", "fruit", "cat", "dog", "beauty"};
+    private static final String[] keys = {"smile", "fruit", "cat", "dog", "beauty", "fly"};
     private static int keySeed = 0;
     private static MutableLiveData<LoadDataStatus> currentLoadDataStatusLiveData = new MutableLiveData<>();
     private Context context;
